@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <title>NANIBOARD - ULTIMATE VERSION</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" media="screen" href="css/index.css">
+		<style>
+			body, html {
+				height: 100%;
+				background-color: black;
+			}
+
+			.bg { 
+				background-image: url("img/nani.jpg");
+				height: 100%; 
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			
+			#naniImg{
+				height: 50%;
+				width: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bg fade"></div>
+		<div id="wrapper" style="text-align: center; font-size: 30px;color: #fff;">
+		
+			<div id="userNote" style="position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%);">
+			<p class="fade" style=" text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px red;">omae wa mou shindeiru</p>
+				<audio id="omae" src="audio/omae.mp3"></audio>
+				<audio id="nani" src="audio/nani.mp3"></audio>
+				<button class="noteBtn fade" style="height: 50%; background-color:rgb(255,255,255, 0%); border-color: rgb(255,255,255, 0%)" onclick="document.getElementById('nani').play()"><img src="img/nani.png" alt="Play NANI" id="naniImg"></button>
+			</div>
+		</div>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".fade").hide(0).delay(500).fadeIn(3000)
+				$("#omae").get(0).play();
+			});
+		</script>
+	</body>
+</html>
